@@ -8,11 +8,13 @@ export class AuthController{
     //now we create endpoints for login and signup  
     @Post('signup')  
     signup(){ 
-        return 'I am signed up';
+        return this.authService.signup();
     } 
     
     @Post('login') 
     login(){ 
-        return 'I am logged in';
+        //keep the controller clean 
+        //keep it busy with only the request stuff logic
+        return this.authService.login(); 
     } 
 }  
