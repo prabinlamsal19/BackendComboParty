@@ -4,18 +4,15 @@ import { AuthService } from "./auth.service";
 //here i am putting a global prefix route 'auth'
 @Controller('auth')    
 export class AuthController{ 
-    constructor(private authService: AuthService){ 
-    } 
+    constructor(private authService: AuthService){} 
     //now we create endpoints for login and signup  
-    
     @Post('signup')  
-    signup(): string{ 
-        return 'I am signed up'
+    signup(){ 
+        return 'I am signed up';
     } 
     
-    @Post ('login') 
+    @Post('login') 
     login(){ 
-   
-        return 'I am logged in'
-    }
-} 
+        return 'I am logged in';
+    } 
+}  
