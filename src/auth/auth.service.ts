@@ -7,6 +7,6 @@ export class AuthService{
    }  
 
    signup(){ 
-    return {msg: "Hello, I have signed up."}
+    return {msg: "Hello, I have signed up."} 
    } 
-}  
+}   
