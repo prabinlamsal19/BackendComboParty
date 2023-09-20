@@ -6,7 +6,11 @@ import { BookmarkModule } from './bookmark/bookmark.module';
 import { PrismaModule } from './prisma/prisma.module';
 
 //configmodule is here for loading .env files
+//there is also configservice availaible , that can be imported anywhere we want
 @Module({
-  imports: [ConfigModule.forRoot({}), AuthModule, UserModule, BookmarkModule, PrismaModule],
+  imports: [ConfigModule.forRoot({ 
+    isGlobal: true,
+  }), AuthModule, UserModule, BookmarkModule, PrismaModule],
 })
-export class AppModule {}
+export class AppModule {} 
+
