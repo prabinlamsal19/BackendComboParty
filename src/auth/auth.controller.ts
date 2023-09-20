@@ -15,18 +15,18 @@ export class AuthController{
         //dto are objects that are used to take in the request 
         // we do not use the request object. We use the dto instead 
 
-        //normally, here we had to vallidate the input email and name 
+        //normally, here we had to validate the input email and name 
         //but we don't need to do that manually in nest 
-        //we can use the class vallidator and class transformer library 
+        //we can use the class validator and class transformer library 
         //(present on the nest js official documentation)  
 
         return this.authService.signup(dto);
     } 
     
     @Post('login') 
-    login(){ 
+    login(@Body() dto: AuthDto){ 
         //keep the controller clean 
         //keep it busy with only the request stuff logic
-        return this.authService.login(); 
+        return this.authService.login(dto); 
     } 
 }  
