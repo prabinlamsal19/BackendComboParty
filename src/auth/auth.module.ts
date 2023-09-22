@@ -11,7 +11,6 @@ import { JwtStrategy } from './strategy';
 })
 export class AuthModule{}  
 
-
 //controller needs to call the service(a function from the service) 
 //and controller returns the result to the user 
 //but service ko instance is not created in the controller 
